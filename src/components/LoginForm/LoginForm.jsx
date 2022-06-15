@@ -1,7 +1,7 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import * as usersService from '../../utilities/users-service';
 
-export default function LogIn({setUser}) {
+export default function LogIn({ setUser }) {
     const [credentials, setCredentials] = useState({
         email: '',
         password: ''
@@ -16,6 +16,9 @@ export default function LogIn({setUser}) {
     async function handleSubmit(evt) {
         evt.preventDefault();
         try {
+            // The promise returned by the signUp service method 
+            // will resolve to the user object included in the
+            // payload of the JSON Web Token (JWT)
             const user = await usersService.login(credentials);
             setUser(user);
         } catch {
@@ -30,8 +33,7 @@ export default function LogIn({setUser}) {
                     <label>Email</label>
                     <input type="text" name="email" value={credentials.email} onChange={handleChange} required/>
                     <label>Password</label>
-                    <input type="password" name="password" value={credentials.password} onChange={handleChange}
-                           required/>
+                    <input type="password" name="password" value={credentials.password} onChange={handleChange} required/>
                     <button type="submit">LOG IN</button>
                 </form>
             </div>
