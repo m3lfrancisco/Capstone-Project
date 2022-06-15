@@ -24,6 +24,15 @@ export async function login(credentials) {
     }
 }
 
+export function logOut() {
+    localStorage.removeItem('token');
+}
+
+export function checkToken() {
+    return usersAPI.checkToken()
+        .then(dateStr => new Date(dateStr));
+}
+
 export function getToken() {
     // getItem returns null if there's no string
     const token = localStorage.getItem('token');
@@ -43,13 +52,4 @@ export function getUser() {
     const token = getToken();
     // If there's a token, return the user in the payload, otherwise return null
     return token ? JSON.parse(atob(token.split('.')[1])).user : null;
-}
-
-export function logOut() {
-    localStorage.removeItem('token');
-}
-
-export function checkToken() {
-    return usersAPI.checkToken()
-        .then(dateStr => new Date(dateStr));
 }
