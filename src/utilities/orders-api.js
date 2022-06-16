@@ -26,6 +26,7 @@ export function checkout() {
     return sendRequest(`${BASE_URL}/cart/checkout`, 'POST');
 }
 
+// Retrieve paid orders for the logged in user
 export function getOrderHistory() {
     return sendRequest(`${BASE_URL}/orders`);
 }

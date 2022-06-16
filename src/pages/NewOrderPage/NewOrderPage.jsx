@@ -1,13 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
-import * as winesAPI from '../../utilities/wines-api';
-import './NewOrderPage.css';
 import { Link, useHistory } from 'react-router-dom';
+import * as winesAPI from '../../utilities/wines-api';
+import * as ordersAPI from '../../utilities/orders-api';
 // import Logo from '../../components/Logo/Logo';
 import WineList from '../../components/WineList/WineList';
 import CategoryList from '../../components/CategoryList/CategoryList';
-import OrderDetail from '../../components/OrderDetail/OrderDetail';
 import UserLogOut from '../../components/UserLogOut/UserLogOut';
-import * as ordersAPI from '../../utilities/orders-api';
+import OrderDetail from '../../components/OrderDetail/OrderDetail';
+import './NewOrderPage.css';
 
 export default function NewOrderPage({ user, setUser }) {
     const [wineItems, setWineItems] = useState([]);
@@ -37,31 +37,31 @@ export default function NewOrderPage({ user, setUser }) {
 
   // Event HANDLERS
     async function handleAddToOrder(wineId) {
-    const cart = await ordersAPI.addItemToCart(wineId);
-    setCart(cart);
+        const cart = await ordersAPI.addItemToCart(wineId);
+        setCart(cart);
     }
 
     async function handleChangeQty(wineId, newQty) {
-    const cart = await ordersAPI.setItemQtyInCart(wineId, newQty);
-    setCart(cart);
+        const cart = await ordersAPI.setItemQtyInCart(wineId, newQty);
+        setCart(cart);
     }
 
     async function handleCheckout() {
-    await ordersAPI.checkout();
-    history.push('/orders');
+        await ordersAPI.checkout();
+        history.push('/orders');
     }
 
     return (
         <main className="NewOrderPage">
             <aside>
-            {/* <Logo /> */}
-            <CategoryList
-                categories={categoriesRef.current}
-                activeCat={activeCat}
-                setActiveCat={setActiveCat}
-            />
-            <Link to="/orders" className="button btn-sm">PREVIOUS ORDERS</Link>
-            <UserLogOut user={user} setUser={setUser} />
+                {/* <Logo /> */}
+                <CategoryList
+                    categories={categoriesRef.current}
+                    activeCat={activeCat}
+                    setActiveCat={setActiveCat}
+                />
+                <Link to="/orders" className="button btn-sm">PREVIOUS ORDERS</Link>
+                <UserLogOut user={user} setUser={setUser} />
             </aside>
             <WineList
                 wineItems={wineItems.filter(wine => wine.category.name === activeCat)}

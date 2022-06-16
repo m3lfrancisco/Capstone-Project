@@ -1,18 +1,20 @@
-import { Link } from 'react-router-dom';
 import './OrderListItem.css';
 
-export default function OrderListItem({ order }) {
+export default function OrderListItem({ order, setActiveOrder  }) {
+
+    function handleSelectOrder() {
+        setActiveOrder(order);
+    }
+
     return (
-        <Link to="">
-            <div className="OrderListItem">
-                <div className="name">Order Id: {order.orderId}
-                    <div className="date">{new Date(order.updatedAt).toLocaleDateString()}</div>
-                </div>
-                <div className="price">
-                    <span>${order.orderTotal.toFixed(2)}</span>
-                    <span>{order.totalQty} items</span>
-                </div>
+        <div className="OrderListItem" onClick={handleSelectOrder}>
+            <div className="name">Order Id: {order.orderId}
+                <div className="date">{new Date(order.updatedAt).toLocaleDateString()}</div>
             </div>
-        </Link>
+            <div className="price">
+                <span>${order.orderTotal.toFixed(2)}</span>
+                <span>{order.totalQty} items</span>
+            </div>
+        </div>
     );
 }

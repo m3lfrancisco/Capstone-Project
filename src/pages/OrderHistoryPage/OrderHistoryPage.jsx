@@ -1,13 +1,12 @@
-// import { checkToken } from "../../utilities/users-service";
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import OrderList from "../../components/OrderList/OrderList";
 import UserLogOut from '../../components/UserLogOut/UserLogOut';
+import OrderList from "../../components/OrderList/OrderList";
+import OrderDetail from '../../components/OrderDetail/OrderDetail';
 import * as ordersAPI from '../../utilities/orders-api';
 import './OrderHistoryPage.css';
 
-
-export default function OrderHistoryPage({ user,setUser }) {
+export default function OrderHistoryPage({ user, setUser }) {
     const [orders, setOrders] = useState([]);
     const [activeOrder, setActiveOrder] = useState(null);
     
@@ -22,26 +21,18 @@ export default function OrderHistoryPage({ user,setUser }) {
         getOrders();
     }, []);
 
-    function handleSelectOrder(order) {
-        setActiveOrder(order);
-    }
-
-    // async function handleCheckToken() {
-    //     // alert("clicked");
-    //     const expDate = await checkToken();
-    //     console.log(expDate);
-    // }
-
     return (
         <main className="OrderHistoryPage">
-            <h1>Order History</h1>
-            <Link to="/orders/new" className="button btn-sm">NEW ORDER</Link>
-            <UserLogOut user={user} setUser={setUser} />
+            {/* <h1>Order History</h1> */}
+            <aside>
+                <Link to="/orders/new" className="button btn-sm">NEW ORDER</Link>
+                <UserLogOut user={user} setUser={setUser} />
+            </aside>
             <OrderList 
                 orders={orders} 
-                activeOrder={activeOrder}
-                handleSelectOrder={handleSelectOrder}
+                setActiveOrder={setActiveOrder}
             />
+            <OrderDetail order={activeOrder} />
         </main>
     );
 }

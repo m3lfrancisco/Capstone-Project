@@ -1,7 +1,7 @@
 export default function WineListItem({ wineItem, handleAddToOrder }) {
     return (
         <div className="WineListItem">
-            <img src={wineItem.image} alt={wineItem.name}/>
+            <img src={wineItem.image} alt=""/>
             <div className="winery">{wineItem.winery}</div>
             <div className="location">{wineItem.location}</div>
             <div className="name">{wineItem.name}</div>
