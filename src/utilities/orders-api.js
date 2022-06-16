@@ -10,7 +10,7 @@ export function getCart() {
 // Retrieve an unpaid order for the logged in user
 export function addItemToCart(wineId) {
   // Just send wineId for best security (no pricing)
-    return sendRequest(`${BASE_URL}/cart/items/${wineId}`, 'POST');
+    return sendRequest(`${BASE_URL}/cart/wines/${wineId}`, 'POST');
 }
 
 // Update the wine's qty in the cart
@@ -27,5 +27,5 @@ export function checkout() {
 }
 
 export function getOrderHistory() {
-    return sendRequest(`${BASE_URL}/history`);
+    return sendRequest(`${BASE_URL}/orders`);
 }
