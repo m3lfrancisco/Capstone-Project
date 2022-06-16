@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from "react";
-import {Route, Switch, Redirect} from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import { getUser } from '../../utilities/users-service';
 import AuthPage from "../AuthPage/AuthPage";
 import NewOrderPage from "../NewOrderPage/NewOrderPage";
@@ -14,7 +14,7 @@ export default function App() {
         <main className="App">
             {user ? 
                 <>
-                    <h1>Welcome { user }!</h1>
+                    {/* <h1>Welcome {user}!</h1> */}
                     <NavBar user={user} setUser={setUser}/>
                     <Switch>
                         <Route path="/orders/new">
