@@ -1,4 +1,4 @@
-const Order = require('../../models/order');
+const Order = require('../../models/orders');
 
 module.exports = {
     cart,
@@ -24,7 +24,7 @@ async function addToCart(req, res) {
 // Updates a wine's qty in the cart
 async function setItemQtyInCart(req, res) {
     let cart = await Order.getCart(req.user._id);
-    await cart.setItemQty(req.body.itemId, req.body.newQty);
+    await cart.setItemQty(req.body.wineId, req.body.newQty);
     res.json(cart);
 }
 
