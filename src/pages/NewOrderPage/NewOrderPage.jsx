@@ -17,16 +17,16 @@ export default function NewOrderPage({ user, setUser }) {
     const history = useHistory();
 
     useEffect(function() {
-    async function getItems() {
+    async function getWines() {
         const wines = await winesAPI.getAll();
         categoriesRef.current = wines.reduce((cats, wine) => {
-        const cat = wine.category.name;
-        return cats.includes(cat) ? cats : [...cats, cat];
+            const cat = wine.category.name;
+            return cats.includes(cat) ? cats : [...cats, cat];
         }, []);
         setWineItems(wines);
         setActiveCat(wines[0].category.name);
     }
-    getItems();
+    getWines();
 
     async function getCart(){
         const cart = await ordersAPI.getCart();
