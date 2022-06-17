@@ -19,14 +19,6 @@ const Wine = require('./models/wine');
     await Wine.deleteMany({});
     const wines = await Wine.create([
         {
-            winery: "Maselva",
-            name: "Emporda 2012",
-            location: "Spain, Empordà",
-            image: "https://images.vivino.com/thumbs/ApnIiXjcT5Kc33OHgNb9dA_375x500.jpg",
-            category: categories[0],
-            price: 50.73
-        },
-        {
             winery: "Ernesto Ruffo",
             name: "Amarone della Valpolicella Riserva N.V.",
             location: "Italy",
@@ -59,22 +51,6 @@ const Wine = require('./models/wine');
             price: 570.00
         },
         {
-            winery: "Sine Qua Non",
-            wine: "Ratsel Syrah N.V.",
-            location: "United States, California",
-            image: "https://images.vivino.com/thumbs/ZzMKzqFqRO-6oI3ys3gGgQ_pb_x300.png",
-            category: categories[0],
-            price: 280.00
-        },
-        {
-            winery: "Del Dotto",
-            wine: "The Beast Cabernet Sauvignon 2012",
-            location: "United States, Rutherford",
-            image: "https://images.vivino.com/thumbs/easjTPIcS-mCQ99XoYOMgQ_pb_x300.png",
-            category: categories[0],
-            price: 276.00
-        },
-        {
             winery: "Darioush",
             name: "Darius II Cabernet Sauvignon 2016",
             location: "United States, Napa Valley",
@@ -105,14 +81,6 @@ const Wine = require('./models/wine');
             image: "https://images.vivino.com/thumbs/HYVZMFigQ5qXxni7s9SpWw_pb_x300.png",
             category: categories[0],
             price: 948.00
-        },
-        {
-            winery: "Domaine de La Romanée-Conti",
-            name: "Montrachet Grand Cru 2014",
-            location: "France, Montrachet Grand Cru",
-            image: "https://images.vivino.com/thumbs/rORmihtxSrKG7SfuI0bD6w_pb_x300.png",
-            category: categories[1],
-            price: 12978.49
         },
         {
             winery: "Jarvis",
@@ -181,7 +149,7 @@ const Wine = require('./models/wine');
         {
             winery: "Krug",
             name: "Clos d'Ambonnay Blanc de Noirs Brut Champagne 1995",
-            location: "Fra, Champagne",
+            location: "France, Champagne",
             image: "https://images.vivino.com/thumbs/DPq0ayGPR4SBeTDsYzLiiA_pb_x300.png",
             category: categories[2],
             price: 2799.00
@@ -203,12 +171,12 @@ const Wine = require('./models/wine');
             price: 349.99
         },
         {
-            winery: "Louis Roederer",
-            name: "Brut Premier Champagne 1993",
-            location: "France, Champagne Premier Cru",
-            image: "https://images.vivino.com/thumbs/3PMfb042TN-5ZzzqkBEIHA_pb_x300.png",
+            winery: "Moët & Chandon",
+            name: "White Star Champagne 2000",
+            location: "France, Champagne",
+            image: "https://images.vivino.com/thumbs/8XZqb52NRhaWolq_v4mVvg_pb_x300.png",
             category: categories[2],
-            price: 59.99
+            price: 75.00
         },
         {
             winery: "Louis Roederer",
@@ -251,14 +219,6 @@ const Wine = require('./models/wine');
             price: 95.00
         },
         {
-            winery: "Antinori",
-            name: "Fonte de' Medici 2011",
-            location: "Italy, Vino d'Italia",
-            image: "https://images.vivino.com/highlights/icon/top_ranked.svg",
-            category: categories[3],
-            price: 89.90
-        },
-        {
             winery: "Minuty",
             name: "281 Rosé 2014",
             location: "France, Provence",
@@ -267,20 +227,20 @@ const Wine = require('./models/wine');
             price: 119.99
         },
         {
-            winery: "Bodegas Vilano",
-            name: "Think Pink Rosado 2017",
-            location: "Spain, Ribera del Duero",
-            image: "https://images.vivino.com/highlights/icon/most_user_rated.svg",
-            category: categories[3],
-            price: 6.00
-        },
-        {
             winery: "Batič",
             name: "Rosé 2013",
             location: "Slovenia, Vipava",
             image: "https://images.vivino.com/thumbs/JGtf1UccSRab3Tv4lihFNw_pb_x300.png",
             category: categories[3],
             price: 31.49
+        },
+        {
+            winery: "Marani",
+            name: "Pirosmani Medium Dry Rosé 2016",
+            location: "Georgia, Kakheti",
+            image: "https://images.vivino.com/thumbs/zwtlu0ULTDiN43iBOuVE-w_pb_x300.png",
+            category: categories[3],
+            price: 9.40
         },
         {
             winery: "Monte da Ravasqueira",
@@ -397,7 +357,7 @@ const Wine = require('./models/wine');
         {
             winery: "V. Sattui",
             name: "Madeira 2010",
-            location: "United States, California",
+            location: "United States, Napa Valley",
             image: "https://images.vivino.com/thumbs/LKgiR6xxQ6OcFP09vAch-A_pb_x300.png",
             category: categories[5],
             price: 61.00
@@ -425,6 +385,22 @@ const Wine = require('./models/wine');
             image: "https://images.vivino.com/thumbs/1GeuZNtSQW6b5HewxCG3UQ_pb_x300.png",
             category: categories[5],
             price: 3200.00
+        },
+        {
+            winery: "Prager Winery and Port Works",
+            name: "Noble Companion Tawny Port 2008",
+            location: "United States, Napa Valley",
+            image: "https://images.vivino.com/thumbs/1Ous8R6yQL-JcZ-Cwz3s-g_pb_x300.png",
+            category: categories[5],
+            price: 125.00
+        },
+        {
+            winery: "Boplaas",
+            name: "Cape Vintage Reserve Port 2009",
+            location: "South Africa, Western Cape",
+            image: "https://images.vivino.com/thumbs/8ddLYDjnRNCPxXo-4PGwhw_pb_x300.png",
+            category: categories[5],
+            price: 48.00
         }
     ]);
 
