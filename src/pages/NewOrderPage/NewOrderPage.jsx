@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import * as winesAPI from '../../utilities/wines-api';
 import * as ordersAPI from '../../utilities/orders-api';
-// import Logo from '../../components/Logo/Logo';
+import Logo from '../../components/Logo/Logo';
 import WineList from '../../components/WineList/WineList';
 import CategoryList from '../../components/CategoryList/CategoryList';
 import UserLogOut from '../../components/UserLogOut/UserLogOut';
@@ -54,7 +54,7 @@ export default function NewOrderPage({ user, setUser }) {
     return (
         <main className="NewOrderPage">
             <aside>
-                {/* <Logo /> */}
+                <Logo />
                 <CategoryList
                     categories={categoriesRef.current}
                     activeCat={activeCat}

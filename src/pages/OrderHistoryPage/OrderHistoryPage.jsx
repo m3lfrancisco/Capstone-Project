@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Logo from '../../components/Logo/Logo';
 import UserLogOut from '../../components/UserLogOut/UserLogOut';
 import OrderList from "../../components/OrderList/OrderList";
 import OrderDetail from '../../components/OrderDetail/OrderDetail';
@@ -25,6 +26,7 @@ export default function OrderHistoryPage({ user, setUser }) {
         <main className="OrderHistoryPage">
             {/* <h1>Order History</h1> */}
             <aside>
+                <Logo />
                 <Link to="/orders/new" className="button btn-sm">NEW ORDER</Link>
                 <UserLogOut user={user} setUser={setUser} />
             </aside>
