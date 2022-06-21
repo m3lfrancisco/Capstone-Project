@@ -1,5 +1,5 @@
 .CategoryList {
-    color: var(--text-light);
+    color: #2E1114;
     list-style: none;
     padding: 0;
     font-size: 1.7vw;
@@ -14,7 +14,7 @@
     
 .CategoryList li:hover:not(.active) {
     cursor: pointer;
-    background-color: var(--orange);
+    background-color: #83677B;
     color: var(--white);
 }
 
