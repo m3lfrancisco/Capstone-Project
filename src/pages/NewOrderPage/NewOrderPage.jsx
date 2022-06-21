@@ -1,20 +1,15 @@
 import { useState, useEffect, useRef } from 'react';
-import { Link, useHistory } from 'react-router-dom';
 import * as winesAPI from '../../utilities/wines-api';
 import * as ordersAPI from '../../utilities/orders-api';
-import Logo from '../../components/Logo/Logo';
 import WineList from '../../components/WineList/WineList';
 import CategoryList from '../../components/CategoryList/CategoryList';
-import UserLogOut from '../../components/UserLogOut/UserLogOut';
-import OrderDetail from '../../components/OrderDetail/OrderDetail';
 import './NewOrderPage.css';
 
-export default function NewOrderPage({ user, setUser }) {
+export default function NewOrderPage() {
     const [wineItems, setWineItems] = useState([]);
     const [activeCat, setActiveCat] = useState('');
     const [cart, setCart] = useState(null);
     const categoriesRef = useRef([]);
-    const history = useHistory();
 
     useEffect(function() {
     async function getWines() {
@@ -41,37 +36,25 @@ export default function NewOrderPage({ user, setUser }) {
         setCart(cart);
     }
 
-    async function handleChangeQty(wineId, newQty) {
-        const cart = await ordersAPI.setItemQtyInCart(wineId, newQty);
-        setCart(cart);
-    }
-
-    async function handleCheckout() {
-        await ordersAPI.checkout();
-        history.push('/orders');
-    }
-
     return (
         <main className="NewOrderPage">
-            <aside>
-                <Logo />
-                <CategoryList
-                    categories={categoriesRef.current}
-                    activeCat={activeCat}
-                    setActiveCat={setActiveCat}
+            <div className="NewOrderPageHeader">
+                <h1>We Offer A Fine Selection of Rare Wines</h1>
+                <h3>Please Choose Your Wine</h3>
+            </div>
+            <div className="NewOrderPageBody">
+                <aside>
+                    <CategoryList
+                        categories={categoriesRef.current}
+                        activeCat={activeCat}
+                        setActiveCat={setActiveCat}
+                    />
+                </aside>
+                <WineList
+                    wineItems={wineItems.filter(wine => wine.category.name === activeCat)}
+                    handleAddToOrder={handleAddToOrder}
                 />
-                <Link to="/orders" className="button btn-sm">PREVIOUS ORDERS</Link>
-                <UserLogOut user={user} setUser={setUser} />
-            </aside>
-            <WineList
-                wineItems={wineItems.filter(wine => wine.category.name === activeCat)}
-                handleAddToOrder={handleAddToOrder}
-            />
-            <OrderDetail 
-                order={cart}
-                handleChangeQty={handleChangeQty}
-                handleCheckout={handleCheckout}
-            />
-        </main>
+            </div>
+        </main>    
     );
 }
