@@ -1,88 +1,39 @@
-# MERN-Stack Infrastructure
+# [Vintage Vintner](https://vintage-vintner.herokuapp.com/)
 
-Clone this repo to provide the starter code for a comprehensive MERN-Stack project including token-based authentication.
-
-## Using MERN-Infrastructure to Create MERN-Stack Projects
-
-### Here's the process to create a new MERN-Stack project that starts with the infrastructure code:
-
-1. Clone the `mern-infrastructure` repo.
-2. Rename the new `mern-infrastructure` folder to the name of your new project.
-3. Optionally, update the `"name": "mern-infrastructure"` in **package.json**.
-4. Create a new repo on your personal GitHub account.
-5. Copy the GitHub repo's URL.
-6. Update the remote's URL: `git remote set-url origin <paste the copied url>`
-7. Push for the first time: `git push -u origin main`
+For my Capstone Project I decided to make an online wine shop called **Vintage Vintner**. At Vintage Vintner, we only sell the finest wine sourced from all over the world. Our wines are highly rated and rare. You won't find our wines at any ordinary liquor store or shop. So come check out the treasures from our cellar. 
 
 ---
 
-# Getting Started with Create React App
+![Vintage Vintner Landing Page](https://imgur.com/v63mRYA.png)
+![Vintage Vintner New Order Page](https://imgur.com/9jpk95C.png)
+![Vintage Vintner Order History Page](https://imgur.com/Bl6QbJI.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## Technologies Used
 
-In the project directory, you can run:
+* [MongoDB](https://www.mongodb.com/cloud/atlas/lp/try2?utm_source=google&utm_campaign=gs_americas_united_states_search_core_brand_atlas_desktop&utm_term=mongodb&utm_medium=cpc_paid_search&utm_ad=e&utm_ad_campaign_id=12212624338&adgroup=115749704103&gclid=CjwKCAjwjtOTBhAvEiwASG4bCMsWwPdZJxSjVYS_jkDsauFz88JIqH2xqdNPltwSrPDnW4Ud3UDl1xoCSEsQAvD_BwE)
 
-### `npm start`
+* [Express](https://expressjs.com/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* [React](https://create-react-app.dev/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* [Node.js](https://nodejs.org/en/) 
 
-### `npm test`
+* [React Bootstrap](https://react-bootstrap.github.io/) 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Project Planning
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* [ERD](https://lucid.app/lucidchart/5083aaa0-985b-45b7-bf98-4576d55ff4fb/edit?beaconFlowId=249D78055E25C56D&invitationId=inv_cd7b5279-81b2-4351-99d2-54d25613b519&page=0_0#)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* [GitHub Projects](https://github.com/m3lfrancisco/Capstone-Project/projects/1)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* [Wireframe](https://whimsical.com/ga-seir-capstone-project-QqnDGnu7mBTouhX5eKvEVx) 
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Next Steps
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [ ] Add the wine score for each wine
