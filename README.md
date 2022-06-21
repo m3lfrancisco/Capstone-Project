@@ -1,6 +1,6 @@
 # [Vintage Vintner](https://vintage-vintner.herokuapp.com/)
 
-For my Capstone Project I decided to make an online wine shop called **Vintage Vintner**. At Vintage Vintner, we only sell the finest wine sourced from all over the world. Our wines are highly rated and rare. You won't find our wines at any ordinary liquor store or shop. So come check out the treasures from our cellar. 
+For my Capstone Project I decided to make an online wine shop called **Vintage Vintner**. At **Vintage Vintner**, we only sell the finest wine sourced from all over the world. Our wines are highly rated and rare. You won't find our wines at any ordinary liquor store or shop. So come check out the treasures from our cellar. 
 
 ---
 
@@ -37,3 +37,17 @@ For my Capstone Project I decided to make an online wine shop called **Vintage V
 ## Next Steps
 
 - [ ] Add the wine score for each wine
+- [ ] Add tasting notes for each wine
+- [ ] Add functionality for users to see how many items are in the cart without clicking it
+
+---
+
+## Acknowledgements
+
+* City of Rancho Cordova, CA
+* General Assembly
+* Suresh Sigera
+* Nathan Mausert
+* GA SEIR 3-28 cohort mates
+* Sample APIs
+* Video by minehart from Pixabay
