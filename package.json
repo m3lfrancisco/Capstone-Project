@@ -2,7 +2,8 @@
   "name": "capstone-project",
   "version": "0.1.0",
   "engines": {
-    "node": "16.15.0"
+    "node": "16.15.x",
+    "npm": "8.5.x"
   },
   "private": true,
   "dependencies": {
