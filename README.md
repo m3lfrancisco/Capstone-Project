@@ -6,7 +6,7 @@ For my Capstone Project I decided to make an online wine shop called **Vintage V
 
 ![Vintage Vintner Landing Page](https://imgur.com/v63mRYA.png)
 ![Vintage Vintner New Order Page](https://imgur.com/9jpk95C.png)
-![Vintage Vintner Order History Page](https://imgur.com/Bl6QbJI.png)
+![Vintage Vintner Order History Page](https://imgur.com/ICezwVK.png)
 
 ---
 
