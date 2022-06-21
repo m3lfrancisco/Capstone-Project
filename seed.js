@@ -44,7 +44,7 @@ const Wine = require('./models/wine');
         },
         {
             winery: "Hundred Acre",
-            wine: "Wraith Cabernet Sauvignon 2013",
+            name: "Wraith Cabernet Sauvignon 2013",
             location: "United States, Napa Valley",
             image: "https://images.vivino.com/thumbs/PBhGMcRNQ7aVnVNr7VgnWA_pb_x300.png",
             category: categories[0],
