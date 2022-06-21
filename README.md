@@ -39,6 +39,7 @@ For my Capstone Project I decided to make an online wine shop called **Vintage V
 - [ ] Add the wine score for each wine
 - [ ] Add tasting notes for each wine
 - [ ] Add functionality for users to see how many items are in the cart without clicking it
+- [ ] Add functionality for users to be able to favorite the wines that they loved and have a favorites list, so it would be easy to go back and buy the wines that they love
 
 ---
 
