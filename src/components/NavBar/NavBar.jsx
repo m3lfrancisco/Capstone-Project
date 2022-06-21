@@ -1,5 +1,5 @@
 import * as userService from '../../utilities/users-service';
-import Navbar from 'react-bootstrap/Navbar';
+import * as Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Offcanvas from 'react-bootstrap/Offcanvas'
