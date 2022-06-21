@@ -1,5 +1,3 @@
-// import './LineItem.css';
-
 export default function LineItem({ lineItem, isPaid, handleChangeQty }) {
     return (
         <div className="LineItem">
@@ -15,15 +13,15 @@ export default function LineItem({ lineItem, isPaid, handleChangeQty }) {
                     onClick={() => handleChangeQty(lineItem.wine._id, lineItem.qty - 1)}
                 >−</button>
                 }
-            <span>{lineItem.qty}</span>
-            {!isPaid &&
-                <button
-                    className="btn-xs"
-                    onClick={() => handleChangeQty(lineItem.wine._id, lineItem.qty + 1)}
-                >+</button>
-            }
+                <span style={{ padding: '2vmin' }}>{lineItem.qty}</span>
+                {!isPaid &&
+                    <button
+                        className="btn-xs"
+                        onClick={() => handleChangeQty(lineItem.wine._id, lineItem.qty + 1)}
+                    >+</button>
+                }
+                <span className="ext-price">${lineItem.extPrice.toFixed(2)}</span>
             </div>
-            <div className="ext-price">${lineItem.extPrice.toFixed(2)}</div>
         </div>
     );
 }
